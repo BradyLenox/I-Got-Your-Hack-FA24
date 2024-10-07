@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cu4taj58j1k5"]
+
+[node name="puzzle_template" type="Node2D"]
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+offset_left = 224.0
+offset_top = 112.0
+offset_right = 928.0
+offset_bottom = 512.0
+mouse_filter = 2

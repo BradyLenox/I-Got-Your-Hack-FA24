@@ -1,0 +1,284 @@
+[gd_scene load_steps=9 format=3 uid="uid://do37jt3p1dp46"]
+
+[ext_resource type="Script" path="res://Scripts/scrambleScript.gd" id="1_41l76"]
+[ext_resource type="Texture2D" uid="uid://dorvxqxj0mjs0" path="res://Assets/UI Panels/Panel/PanelNoF.png" id="2_q3p6g"]
+[ext_resource type="PackedScene" uid="uid://cu4taj58j1k5" path="res://Other Scenes/puzzle_template.tscn" id="2_sjsi0"]
+[ext_resource type="Script" path="res://Scripts/ButtonScript.gd" id="4_sfw6l"]
+[ext_resource type="Texture2D" uid="uid://duknmv52kfni5" path="res://Assets/UI Panels/Buttons/ButtonU.png" id="5_uatxu"]
+[ext_resource type="Texture2D" uid="uid://rblua4uuq8ig" path="res://Assets/UI Panels/Buttons/ButtonUF.png" id="6_yykig"]
+
+[sub_resource type="SystemFont" id="SystemFont_uepym"]
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_hk6b2"]
+subpixel_positioning = 0
+
+[node name="ScrambleScene" type="Node2D"]
+script = ExtResource("1_41l76")
+
+[node name="puzzle_template" parent="." instance=ExtResource("2_sjsi0")]
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(304, 120)
+metadata/_edit_group_ = true
+
+[node name="LetterScramble" type="Node2D" parent="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/LetterScramble"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 528.0
+offset_bottom = 92.0
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D/LetterScramble"]
+texture_filter = 1
+offset_right = 90.0
+offset_bottom = 17.0
+scale = Vector2(6, 6)
+texture = ExtResource("2_q3p6g")
+draw_center = false
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 6
+patch_margin_bottom = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="LetterText" type="Label" parent="Node2D/LetterScramble"]
+modulate = Color(0, 0, 0, 1)
+offset_top = -16.0
+offset_right = 538.0
+offset_bottom = 112.0
+theme_override_fonts/font = SubResource("SystemFont_uepym")
+theme_override_font_sizes/font_size = 81
+text = "MMMMMM"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button1" type="Node2D" parent="Node2D"]
+position = Vector2(0, 112)
+script = ExtResource("4_sfw6l")
+metadata/_edit_group_ = true
+
+[node name="Graphic" type="Node2D" parent="Node2D/Button1"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Node2D/Button1/Graphic"]
+texture_filter = 1
+offset_left = -1.0
+offset_right = 42.0
+offset_bottom = 20.0
+scale = Vector2(6, 6)
+texture = ExtResource("5_uatxu")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+
+[node name="BSFill" type="NinePatchRect" parent="Node2D/Button1/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_left = -1.0
+offset_right = 42.0
+offset_bottom = 22.0
+scale = Vector2(6, 6)
+texture = ExtResource("6_yykig")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+
+[node name="Button" type="Button" parent="Node2D/Button1"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1.0
+offset_right = 257.0
+offset_bottom = 132.0
+
+[node name="Text" type="Label" parent="Node2D/Button1"]
+offset_left = -1.0
+offset_right = 257.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_hk6b2")
+theme_override_font_sizes/font_size = 60
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Node2D" parent="Node2D"]
+position = Vector2(282, 112)
+script = ExtResource("4_sfw6l")
+metadata/_edit_group_ = true
+
+[node name="Graphic" type="Node2D" parent="Node2D/Button2"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Node2D/Button2/Graphic"]
+texture_filter = 1
+offset_left = -1.0
+offset_right = 42.0
+offset_bottom = 22.0
+scale = Vector2(6, 6)
+texture = ExtResource("5_uatxu")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+
+[node name="BSFill" type="NinePatchRect" parent="Node2D/Button2/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_left = -1.0
+offset_right = 42.0
+offset_bottom = 22.0
+scale = Vector2(6, 6)
+texture = ExtResource("6_yykig")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+
+[node name="Button" type="Button" parent="Node2D/Button2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1.0
+offset_right = 257.0
+offset_bottom = 132.0
+
+[node name="Text" type="Label" parent="Node2D/Button2"]
+offset_left = -1.0
+offset_right = 257.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_hk6b2")
+theme_override_font_sizes/font_size = 60
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Node2D" parent="Node2D"]
+position = Vector2(0, 256)
+script = ExtResource("4_sfw6l")
+metadata/_edit_group_ = true
+
+[node name="Graphic" type="Node2D" parent="Node2D/Button3"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Node2D/Button3/Graphic"]
+texture_filter = 1
+offset_left = -1.0
+offset_right = 42.0
+offset_bottom = 22.0
+scale = Vector2(6, 6)
+texture = ExtResource("5_uatxu")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+
+[node name="BSFill" type="NinePatchRect" parent="Node2D/Button3/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_left = -1.0
+offset_right = 42.0
+offset_bottom = 22.0
+scale = Vector2(6, 6)
+texture = ExtResource("6_yykig")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+
+[node name="Button" type="Button" parent="Node2D/Button3"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1.0
+offset_right = 257.0
+offset_bottom = 132.0
+
+[node name="Text" type="Label" parent="Node2D/Button3"]
+offset_left = -1.0
+offset_right = 257.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_hk6b2")
+theme_override_font_sizes/font_size = 60
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Node2D" parent="Node2D"]
+position = Vector2(282, 256)
+script = ExtResource("4_sfw6l")
+metadata/_edit_group_ = true
+
+[node name="Graphic" type="Node2D" parent="Node2D/Button4"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Node2D/Button4/Graphic"]
+texture_filter = 1
+offset_left = -1.0
+offset_right = 42.0
+offset_bottom = 22.0
+scale = Vector2(6, 6)
+texture = ExtResource("5_uatxu")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+
+[node name="BSFill" type="NinePatchRect" parent="Node2D/Button4/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_left = -1.0
+offset_right = 42.0
+offset_bottom = 22.0
+scale = Vector2(6, 6)
+texture = ExtResource("6_yykig")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+
+[node name="Button" type="Button" parent="Node2D/Button4"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1.0
+offset_right = 257.0
+offset_bottom = 132.0
+
+[node name="Text" type="Label" parent="Node2D/Button4"]
+offset_left = -1.0
+offset_right = 257.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_hk6b2")
+theme_override_font_sizes/font_size = 60
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_pushed" from="Node2D/Button1" to="." method="pressedCode1"]
+[connection signal="button_down" from="Node2D/Button1/Button" to="Node2D/Button1" method="buttonDown"]
+[connection signal="button_up" from="Node2D/Button1/Button" to="Node2D/Button1" method="buttonUp"]
+[connection signal="pressed" from="Node2D/Button1/Button" to="Node2D/Button1" method="buttonPressed"]
+[connection signal="button_pushed" from="Node2D/Button2" to="." method="pressedCode2"]
+[connection signal="button_down" from="Node2D/Button2/Button" to="Node2D/Button2" method="buttonDown"]
+[connection signal="button_up" from="Node2D/Button2/Button" to="Node2D/Button2" method="buttonUp"]
+[connection signal="pressed" from="Node2D/Button2/Button" to="Node2D/Button2" method="buttonPressed"]
+[connection signal="button_pushed" from="Node2D/Button3" to="." method="pressedCode3"]
+[connection signal="button_down" from="Node2D/Button3/Button" to="Node2D/Button3" method="buttonDown"]
+[connection signal="button_up" from="Node2D/Button3/Button" to="Node2D/Button3" method="buttonUp"]
+[connection signal="pressed" from="Node2D/Button3/Button" to="Node2D/Button3" method="buttonPressed"]
+[connection signal="button_pushed" from="Node2D/Button4" to="." method="pressedCode4"]
+[connection signal="button_down" from="Node2D/Button4/Button" to="Node2D/Button4" method="buttonDown"]
+[connection signal="button_up" from="Node2D/Button4/Button" to="Node2D/Button4" method="buttonUp"]
+[connection signal="pressed" from="Node2D/Button4/Button" to="Node2D/Button4" method="buttonPressed"]

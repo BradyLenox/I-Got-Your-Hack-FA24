@@ -1,0 +1,538 @@
+[gd_scene load_steps=7 format=3 uid="uid://cl0brvo0oyajx"]
+
+[ext_resource type="Script" path="res://Scripts/colorGridScript.gd" id="1_cykrn"]
+[ext_resource type="PackedScene" uid="uid://cu4taj58j1k5" path="res://Other Scenes/puzzle_template.tscn" id="2_4l1bt"]
+[ext_resource type="Texture2D" uid="uid://duknmv52kfni5" path="res://Assets/UI Panels/Buttons/ButtonU.png" id="2_aoo7d"]
+[ext_resource type="Script" path="res://Scripts/ButtonScript.gd" id="2_m7oqn"]
+[ext_resource type="Texture2D" uid="uid://rblua4uuq8ig" path="res://Assets/UI Panels/Buttons/ButtonUF.png" id="3_0sua8"]
+
+[sub_resource type="SystemFont" id="SystemFont_pycv3"]
+subpixel_positioning = 0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_cykrn")
+
+[node name="puzzle_template" parent="." instance=ExtResource("2_4l1bt")]
+metadata/_edit_lock_ = true
+
+[node name="Con" type="Container" parent="."]
+custom_minimum_size = Vector2(396, 396)
+offset_left = 403.0
+offset_top = 112.0
+offset_right = 799.0
+offset_bottom = 508.0
+metadata/_edit_group_ = true
+
+[node name="Button1" type="Node2D" parent="Con"]
+position = Vector2(-1, 27)
+script = ExtResource("2_m7oqn")
+
+[node name="Graphic" type="Node2D" parent="Con/Button1"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Con/Button1/Graphic"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("2_aoo7d")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="BSFill" type="NinePatchRect" parent="Con/Button1/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_0sua8")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Con/Button1"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 120.0
+offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Con/Button1"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 115.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_pycv3")
+theme_override_font_sizes/font_size = 40
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Node2D" parent="Con"]
+position = Vector2(118, 27)
+script = ExtResource("2_m7oqn")
+
+[node name="Graphic" type="Node2D" parent="Con/Button2"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Con/Button2/Graphic"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("2_aoo7d")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="BSFill" type="NinePatchRect" parent="Con/Button2/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_0sua8")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Con/Button2"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 120.0
+offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Con/Button2"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 115.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_pycv3")
+theme_override_font_sizes/font_size = 40
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Node2D" parent="Con"]
+position = Vector2(237, 27)
+script = ExtResource("2_m7oqn")
+
+[node name="Graphic" type="Node2D" parent="Con/Button3"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Con/Button3/Graphic"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("2_aoo7d")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="BSFill" type="NinePatchRect" parent="Con/Button3/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_0sua8")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Con/Button3"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 120.0
+offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Con/Button3"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 115.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_pycv3")
+theme_override_font_sizes/font_size = 40
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Node2D" parent="Con"]
+position = Vector2(-1, 144)
+script = ExtResource("2_m7oqn")
+
+[node name="Graphic" type="Node2D" parent="Con/Button4"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Con/Button4/Graphic"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("2_aoo7d")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="BSFill" type="NinePatchRect" parent="Con/Button4/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_0sua8")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Con/Button4"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 120.0
+offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Con/Button4"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 115.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_pycv3")
+theme_override_font_sizes/font_size = 40
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button5" type="Node2D" parent="Con"]
+position = Vector2(118, 144)
+script = ExtResource("2_m7oqn")
+
+[node name="Graphic" type="Node2D" parent="Con/Button5"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Con/Button5/Graphic"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("2_aoo7d")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="BSFill" type="NinePatchRect" parent="Con/Button5/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_0sua8")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Con/Button5"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 120.0
+offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Con/Button5"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 115.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_pycv3")
+theme_override_font_sizes/font_size = 40
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button6" type="Node2D" parent="Con"]
+position = Vector2(237, 144)
+script = ExtResource("2_m7oqn")
+
+[node name="Graphic" type="Node2D" parent="Con/Button6"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Con/Button6/Graphic"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("2_aoo7d")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="BSFill" type="NinePatchRect" parent="Con/Button6/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_0sua8")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Con/Button6"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 120.0
+offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Con/Button6"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 115.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_pycv3")
+theme_override_font_sizes/font_size = 40
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button7" type="Node2D" parent="Con"]
+position = Vector2(0, 260)
+script = ExtResource("2_m7oqn")
+
+[node name="Graphic" type="Node2D" parent="Con/Button7"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Con/Button7/Graphic"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("2_aoo7d")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="BSFill" type="NinePatchRect" parent="Con/Button7/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_0sua8")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Con/Button7"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 120.0
+offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Con/Button7"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 115.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_pycv3")
+theme_override_font_sizes/font_size = 40
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button8" type="Node2D" parent="Con"]
+position = Vector2(119, 261)
+script = ExtResource("2_m7oqn")
+
+[node name="Graphic" type="Node2D" parent="Con/Button8"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Con/Button8/Graphic"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("2_aoo7d")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="BSFill" type="NinePatchRect" parent="Con/Button8/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_0sua8")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Con/Button8"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 120.0
+offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Con/Button8"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 115.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_pycv3")
+theme_override_font_sizes/font_size = 40
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button9" type="Node2D" parent="Con"]
+position = Vector2(237, 261)
+script = ExtResource("2_m7oqn")
+
+[node name="Graphic" type="Node2D" parent="Con/Button9"]
+
+[node name="BSOutline" type="NinePatchRect" parent="Con/Button9/Graphic"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("2_aoo7d")
+draw_center = false
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="BSFill" type="NinePatchRect" parent="Con/Button9/Graphic"]
+modulate = Color(0.984505, 0.51643, 0, 1)
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 18.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_0sua8")
+region_rect = Rect2(0, 0, 11, 21)
+patch_margin_left = 5
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Con/Button9"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 120.0
+offset_bottom = 120.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Con/Button9"]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 115.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_pycv3")
+theme_override_font_sizes/font_size = 40
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_pushed" from="Con/Button1" to="." method="buttonPressed"]
+[connection signal="button_down" from="Con/Button1/Button" to="Con/Button1" method="buttonDown"]
+[connection signal="button_up" from="Con/Button1/Button" to="Con/Button1" method="buttonUp"]
+[connection signal="pressed" from="Con/Button1/Button" to="Con/Button1" method="buttonPressed"]
+[connection signal="button_pushed" from="Con/Button2" to="." method="buttonPressed"]
+[connection signal="button_down" from="Con/Button2/Button" to="Con/Button2" method="buttonDown"]
+[connection signal="button_up" from="Con/Button2/Button" to="Con/Button2" method="buttonUp"]
+[connection signal="pressed" from="Con/Button2/Button" to="Con/Button2" method="buttonPressed"]
+[connection signal="button_pushed" from="Con/Button3" to="." method="buttonPressed"]
+[connection signal="button_down" from="Con/Button3/Button" to="Con/Button3" method="buttonDown"]
+[connection signal="button_up" from="Con/Button3/Button" to="Con/Button3" method="buttonUp"]
+[connection signal="pressed" from="Con/Button3/Button" to="Con/Button3" method="buttonPressed"]
+[connection signal="button_pushed" from="Con/Button4" to="." method="buttonPressed"]
+[connection signal="button_down" from="Con/Button4/Button" to="Con/Button4" method="buttonDown"]
+[connection signal="button_up" from="Con/Button4/Button" to="Con/Button4" method="buttonUp"]
+[connection signal="pressed" from="Con/Button4/Button" to="Con/Button4" method="buttonPressed"]
+[connection signal="button_pushed" from="Con/Button5" to="." method="buttonPressed"]
+[connection signal="button_down" from="Con/Button5/Button" to="Con/Button5" method="buttonDown"]
+[connection signal="button_up" from="Con/Button5/Button" to="Con/Button5" method="buttonUp"]
+[connection signal="pressed" from="Con/Button5/Button" to="Con/Button5" method="buttonPressed"]
+[connection signal="button_pushed" from="Con/Button6" to="." method="buttonPressed"]
+[connection signal="button_down" from="Con/Button6/Button" to="Con/Button6" method="buttonDown"]
+[connection signal="button_up" from="Con/Button6/Button" to="Con/Button6" method="buttonUp"]
+[connection signal="pressed" from="Con/Button6/Button" to="Con/Button6" method="buttonPressed"]
+[connection signal="button_pushed" from="Con/Button7" to="." method="buttonPressed"]
+[connection signal="button_down" from="Con/Button7/Button" to="Con/Button7" method="buttonDown"]
+[connection signal="button_up" from="Con/Button7/Button" to="Con/Button7" method="buttonUp"]
+[connection signal="pressed" from="Con/Button7/Button" to="Con/Button7" method="buttonPressed"]
+[connection signal="button_pushed" from="Con/Button8" to="." method="buttonPressed"]
+[connection signal="button_down" from="Con/Button8/Button" to="Con/Button8" method="buttonDown"]
+[connection signal="button_up" from="Con/Button8/Button" to="Con/Button8" method="buttonUp"]
+[connection signal="pressed" from="Con/Button8/Button" to="Con/Button8" method="buttonPressed"]
+[connection signal="button_pushed" from="Con/Button9" to="." method="buttonPressed"]
+[connection signal="button_down" from="Con/Button9/Button" to="Con/Button9" method="buttonDown"]
+[connection signal="button_up" from="Con/Button9/Button" to="Con/Button9" method="buttonUp"]
+[connection signal="pressed" from="Con/Button9/Button" to="Con/Button9" method="buttonPressed"]
