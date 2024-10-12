@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://7gnt7y6ojlo5"]
+
+[ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_pnpn4"]
+[ext_resource type="Texture2D" uid="uid://c3jlvp0mfx0tm" path="res://Assets/Title_Screen.png" id="2_6urva"]
+
+[node name="Title Screen" type="Node2D"]
+script = ExtResource("1_pnpn4")
+
+[node name="Credits" type="Label" parent="."]
+offset_top = 520.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 25
+text = "A Game By Curtis King, Garrett Marcum, and Brady Lenox"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 384.0
+offset_top = 421.0
+offset_right = 768.0
+offset_bottom = 509.0
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[node name="TitleScreen" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(576, 323)
+scale = Vector2(6.00253, 6.02254)
+texture = ExtResource("2_6urva")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

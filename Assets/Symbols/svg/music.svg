@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="21.256252mm"
+   height="49.471603mm"
+   viewBox="0 0 21.256252 49.471603"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="music.png"
+   inkscape:export-xdpi="20.314022"
+   inkscape:export-ydpi="20.314022"
+   sodipodi:docname="music.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="4.3480752"
+     inkscape:cx="40.132701"
+     inkscape:cy="93.489644"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-93.698374,-70.351278)">
+    <path
+       d="m 114.95463,119.82288 h -3.03169 v -6.89019 H 93.698374 V 99.359003 H 111.92294 V 90.81516 H 93.698374 V 77.241475 h 18.224566 v -6.890196 h 3.03169 z"
+       id="text9"
+       style="font-size:70.5556px;stroke-width:0.264583"
+       aria-label="𝇠" />
+  </g>
+</svg>

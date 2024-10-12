@@ -1,0 +1,287 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1i2u22fjt12s"]
+
+[ext_resource type="Script" path="res://Scripts/wiresScript.gd" id="1_2xg1q"]
+[ext_resource type="Script" path="res://Scripts/singleWireScript.gd" id="2_nl6fi"]
+[ext_resource type="Texture2D" uid="uid://dd432qw8m67u1" path="res://Assets/UI Panels/Panel/ScreenSquare.png" id="3_j7p2x"]
+[ext_resource type="Texture2D" uid="uid://b1og8a18t34fd" path="res://Assets/Symbols/winding_trail.png" id="4_3n1ut"]
+[ext_resource type="PackedScene" uid="uid://cu4taj58j1k5" path="res://Other Scenes/puzzle_template.tscn" id="4_ej2l6"]
+[ext_resource type="Texture2D" uid="uid://cw12ix4abqfd3" path="res://Assets/Symbols/strikethrough.png" id="5_1wsjo"]
+[ext_resource type="Texture2D" uid="uid://b1d1aqtk3kbxr" path="res://Assets/Symbols/music.png" id="6_x5327"]
+[ext_resource type="Texture2D" uid="uid://c5ftei08rop62" path="res://Assets/Symbols/theta.png" id="7_msq4h"]
+
+[sub_resource type="SystemFont" id="SystemFont_yvpfb"]
+subpixel_positioning = 0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2xg1q")
+
+[node name="Con" type="Container" parent="."]
+offset_left = 323.0
+offset_top = 112.0
+offset_right = 363.0
+offset_bottom = 152.0
+scale = Vector2(0.935846, 0.935846)
+
+[node name="Wire1" type="Line2D" parent="Con"]
+points = PackedVector2Array(99, 66, 111, 66, 111, 66)
+script = ExtResource("2_nl6fi")
+
+[node name="Wire2" type="Line2D" parent="Con"]
+points = PackedVector2Array(99, 162, 111, 162, 111, 162)
+script = ExtResource("2_nl6fi")
+
+[node name="Wire3" type="Line2D" parent="Con"]
+points = PackedVector2Array(99, 258, 111, 258, 111, 258)
+script = ExtResource("2_nl6fi")
+
+[node name="Wire4" type="Line2D" parent="Con"]
+points = PackedVector2Array(99, 354, 111, 354, 111, 354)
+script = ExtResource("2_nl6fi")
+
+[node name="Node2D2" type="Node2D" parent="Con"]
+
+[node name="VisualWire1" type="Line2D" parent="Con/Node2D2"]
+position = Vector2(321, 0)
+points = PackedVector2Array(99, 66, 111, 66)
+metadata/_edit_group_ = true
+
+[node name="VisualWire2" type="Line2D" parent="Con/Node2D2"]
+position = Vector2(321, 0)
+points = PackedVector2Array(99, 162, 111, 162)
+metadata/_edit_group_ = true
+
+[node name="VisualWire3" type="Line2D" parent="Con/Node2D2"]
+position = Vector2(321, 0)
+points = PackedVector2Array(99, 258, 111, 258)
+metadata/_edit_group_ = true
+
+[node name="VisualWire4" type="Line2D" parent="Con/Node2D2"]
+position = Vector2(321, 0)
+points = PackedVector2Array(99, 354, 111, 354)
+metadata/_edit_group_ = true
+
+[node name="ColorSquare" type="Node2D" parent="Con"]
+
+[node name="Color1" type="ColorRect" parent="Con/ColorSquare"]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 30.0
+offset_bottom = 34.0
+scale = Vector2(6, 6)
+color = Color(0, 1, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Color2" type="ColorRect" parent="Con/ColorSquare"]
+offset_left = 18.0
+offset_top = 114.0
+offset_right = 30.0
+offset_bottom = 130.0
+scale = Vector2(6, 6)
+color = Color(1, 0, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Color3" type="ColorRect" parent="Con/ColorSquare"]
+offset_left = 18.0
+offset_top = 210.0
+offset_right = 30.0
+offset_bottom = 226.0
+scale = Vector2(6, 6)
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Color4" type="ColorRect" parent="Con/ColorSquare"]
+offset_left = 18.0
+offset_top = 306.0
+offset_right = 30.0
+offset_bottom = 322.0
+scale = Vector2(6, 6)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorLabel1" type="Label" parent="Con/ColorSquare"]
+texture_filter = 1
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 90.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_yvpfb")
+theme_override_font_sizes/font_size = 40
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorLabel2" type="Label" parent="Con/ColorSquare"]
+texture_filter = 1
+offset_left = 18.0
+offset_top = 114.0
+offset_right = 90.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_yvpfb")
+theme_override_font_sizes/font_size = 40
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorLabel3" type="Label" parent="Con/ColorSquare"]
+texture_filter = 1
+offset_left = 18.0
+offset_top = 210.0
+offset_right = 90.0
+offset_bottom = 306.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_yvpfb")
+theme_override_font_sizes/font_size = 40
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorLabel4" type="Label" parent="Con/ColorSquare"]
+texture_filter = 1
+offset_left = 18.0
+offset_top = 306.0
+offset_right = 90.0
+offset_bottom = 402.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_yvpfb")
+theme_override_font_sizes/font_size = 40
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorScreen" type="NinePatchRect" parent="Con/ColorSquare"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 71.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_j7p2x")
+patch_margin_left = 4
+patch_margin_top = 5
+patch_margin_right = 4
+patch_margin_bottom = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelSquare" type="Node2D" parent="Con"]
+position = Vector2(432, 0)
+
+[node name="BGcolor" type="ColorRect" parent="Con/LabelSquare"]
+offset_left = 18.0
+offset_top = 25.0
+offset_right = 30.0
+offset_bottom = 88.0
+scale = Vector2(6, 6)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label1" type="Label" parent="Con/LabelSquare"]
+visible = false
+texture_filter = 1
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 90.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_yvpfb")
+theme_override_font_sizes/font_size = 40
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Con/LabelSquare"]
+visible = false
+texture_filter = 1
+offset_left = 18.0
+offset_top = 114.0
+offset_right = 90.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_yvpfb")
+theme_override_font_sizes/font_size = 40
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Con/LabelSquare"]
+visible = false
+texture_filter = 1
+offset_left = 18.0
+offset_top = 210.0
+offset_right = 90.0
+offset_bottom = 306.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_yvpfb")
+theme_override_font_sizes/font_size = 40
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Con/LabelSquare"]
+visible = false
+texture_filter = 1
+offset_left = 18.0
+offset_top = 306.0
+offset_right = 90.0
+offset_bottom = 402.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_yvpfb")
+theme_override_font_sizes/font_size = 40
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelScreen" type="NinePatchRect" parent="Con/LabelSquare"]
+texture_filter = 1
+offset_right = 18.0
+offset_bottom = 71.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_j7p2x")
+patch_margin_left = 4
+patch_margin_top = 5
+patch_margin_right = 4
+patch_margin_bottom = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Con/LabelSquare"]
+
+[node name="SymbolSpot1" type="Marker2D" parent="Con/LabelSquare"]
+position = Vector2(54, 66)
+
+[node name="SymbolSpot2" type="Marker2D" parent="Con/LabelSquare"]
+position = Vector2(54, 162)
+
+[node name="SymbolSpot3" type="Marker2D" parent="Con/LabelSquare"]
+position = Vector2(54, 258)
+
+[node name="SymbolSpot4" type="Marker2D" parent="Con/LabelSquare"]
+position = Vector2(54, 354)
+
+[node name="Symbol1" type="Sprite2D" parent="Con/LabelSquare"]
+position = Vector2(54, 66)
+texture = ExtResource("4_3n1ut")
+
+[node name="Symbol2" type="Sprite2D" parent="Con/LabelSquare"]
+position = Vector2(54, 162)
+texture = ExtResource("5_1wsjo")
+
+[node name="Symbol3" type="Sprite2D" parent="Con/LabelSquare"]
+position = Vector2(54, 258)
+texture = ExtResource("6_x5327")
+
+[node name="Symbol4" type="Sprite2D" parent="Con/LabelSquare"]
+position = Vector2(54, 354)
+texture = ExtResource("7_msq4h")
+
+[node name="puzzle_template" parent="." instance=ExtResource("4_ej2l6")]
+metadata/_edit_lock_ = true
+
+[connection signal="strike" from="Con/Wire1" to="." method="_on_wire_1_strike"]
+[connection signal="strike" from="Con/Wire2" to="." method="_on_wire_2_strike"]
+[connection signal="strike" from="Con/Wire3" to="." method="_on_wire_3_strike"]
+[connection signal="strike" from="Con/Wire4" to="." method="_on_wire_4_strike"]
